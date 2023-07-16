@@ -11,7 +11,8 @@ export default function Chat() {
   }, []);
 
   function socketInit() {
-    socket = io("http://192.168.0.19:8000");
+    socket = io("https://web.alexmoreira.dev.br");
+    // socket = io("http://192.168.0.19:8000");
     socket.on("serverMessage", (data) => {
       setMessages(data);
     });
